@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills</title>
+    <style>
+        body {
+            background-color: #eee;
+            font-family: Arial, sans-serif;
+            color: #555;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #e8ffb6;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #6c2c70;
+        }
+
+        .square-container {
+            background-color: #e8d61097;
+            border-radius: 5px;
+            padding: 15px;
+            margin-bottom: 10px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        p {
+            margin: 0;
+            font-size: 18px;
+            color: #120303; /* Text color inside square container */
+        }
+
+        span {
+            font-weight: bold;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>My <span>Skills</span></h1>
+        <div class="about-skills">
+            <div class="square-container" id="htmlCss">
+                <p class="hidden">Knows a little and the basic about HTML and CSS.</p>
+                <button onclick="showText('htmlCss')">Show</button>
+                <button onclick="hideText('htmlCss')">Hide</button>
+            </div>
+            <div class="square-container" id="author">
+                <p class="hidden">Published author and certified author of the Philippines.</p>
+                <button onclick="showText('author')">Show</button>
+                <button onclick="hideText('author')">Hide</button>
+            </div>
+            <div class="square-container" id="database">
+                <p class="hidden">Have some knowledge about database (SQL)</p>
+                <button onclick="showText('database')">Show</button>
+                <button onclick="hideText('database')">Hide</button>
+            </div>
+            <div class="square-container" id="cosplaying">
+                <p class="hidden">Cosplaying, Online hosting.</p>
+                <button onclick="showText('cosplaying')">Show</button>
+                <button onclick="hideText('cosplaying')">Hide</button>
+            </div>
+            <div class="square-container" id="dancing">
+                <p class="hidden">Dancing, Singing, Playing 6-strings instruments (Acoustic guitar, Electric guitar, and Ukulele).</p>
+                <button onclick="showText('dancing')">Show</button>
+                <button onclick="hideText('dancing')">Hide</button>
+            </div>
+        </div>
+        <a href="index.html" class="btn-back">Back</a>
+    </div>
+
+    <script>
+        function showText(elementId) {
+            var element = document.getElementById(elementId);
+            var paragraph = element.querySelector('p');
+            paragraph.classList.remove("hidden");
+        }
+
+        function hideText(elementId) {
+            var element = document.getElementById(elementId);
+            var paragraph = element.querySelector('p');
+            paragraph.classList.add("hidden");
+        }
+    </script>
+</body>
+</html>
